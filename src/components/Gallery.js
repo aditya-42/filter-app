@@ -12,7 +12,8 @@ const Gallery = () => {
   const filteredArray = profileList.filter((people) => {
     return (
       people.profileName.includes(searchValue) ||
-      people.profileName.toLowerCase().includes(searchValue)
+      people.profileName.toLowerCase().includes(searchValue) ||
+      people.profileName.toUpperCase().includes(searchValue)
     );
   });
 
